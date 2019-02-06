@@ -1,0 +1,17 @@
+# likeajax.likeajax_form:
+#   path: 'likeajax_form'
+#   defaults:
+#     _form: '\Drupal\likeajax\Form\LikeAjaxForm'
+#     _title: 'Głosowanie!'
+#   requirements:
+#     _permission: 'access content'
+
+likeajax.content:
+  path: '/likeajax_votes' 
+  defaults: 
+    _controller: '\Drupal\likeajax\Controller\LikeAjaxController::content' 
+    _title: 'Hello World'
+  requirements: 
+    _permission: 'access content' 
+
+

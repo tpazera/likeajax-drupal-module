@@ -1,0 +1,20 @@
+<?php
+
+/**
+ * Implements hook_menu().
+ */
+function likeajax_menu() {
+    $items['votes'] = array(
+      'page callback' => 'likeajax_getvotes',
+      'type' => MENU_CALLBACK,
+      'access arguments' => array('access content'),
+    );
+    return $items;
+  }
+  
+  /**
+   * Callback to return JSON encoded image for given nid.
+   */
+  function likeajax_getvotes() {
+    drupal_json_output(array('status' => 0, 'data' => 'Hello world!'));
+  }

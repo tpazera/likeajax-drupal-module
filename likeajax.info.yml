@@ -1,0 +1,4 @@
+name: LikeAjax
+description: Liking content with ajax and with email verification
+type: module
+core: 8.x

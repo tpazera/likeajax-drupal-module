@@ -1,0 +1,55 @@
+<?php 
+    function likeajax_schema(){
+    $schema['likeajax_likes'] = array(
+    'description' => 'Tablica glosow dla poszczegolnych dyplomow',
+    'fields' => array(
+        'id' => array(
+            'description' => 'make id primary key auto increment',
+            'type' => 'serial',
+            'not null' => TRUE,
+        ),
+        'email' => array(
+            'description' => 'email',
+            'type' => 'varchar',
+            'length' => '255',
+            'not null' => TRUE,
+        ),
+        'dyplom' => array(
+            'description' => 'dyplom',
+            'type' => 'int',
+            'length' => '10',
+            'not null' => TRUE,
+        ),
+        'mailing' => array(
+            'description' => 'mailing subscription',
+            'type' => 'int',
+            'length' => '10',
+            'default' => 0,
+            'not null' => TRUE,
+        ),
+        'verified' => array(
+            'description' => 'verified mark',
+            'type' => 'int',
+            'length' => '10',
+            'default' => 0,
+            'not null' => TRUE,
+        ),
+        'code' => array(
+            'description' => 'code for verification',
+            'type' => 'varchar',
+            'length' => '255',
+            'not null' => TRUE,
+        ),
+        'date' => array(
+            'description' => 'date of voting',
+            'type' => 'varchar',
+            'mysql_type' => 'datetime',
+            'not null' => TRUE,
+        )
+    ),
+    'primary key' => array('id'),
+    );
+    return $schema;
+}
+
+?>

@@ -1,0 +1,12 @@
+form_functions:
+  js:
+    js/form_functions.js: {}
+votes_counter:
+  js:
+    js/votes_counter.js: {}
+  dependencies:
+    - core/drupalSettings
+    - core/jquery
+    - core/jquery.once
+    - core/drupal.ajax
+  
